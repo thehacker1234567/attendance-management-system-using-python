@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<div class="jumbotron">
+  <h1>Here is a list of all the Students.</h1>
+  <table style="width:100%">
+    <tr>
+      <th>USN</th>
+      <th>NAME</th>
+      <th>SEMESTER</th>
+      <th>DEPARTMENT</th>
+      <th>STUDENT PHNO.</th>
+      <th>PARENT PHNO.</th>
+    </tr>
+
+    {% for stud in STUDENTS  %}
+
+    <tr>
+      <th>{{stud.usn}}</th>
+      <th>{{stud.name}}</th>
+      <th>{{stud.sem}}</th>
+      <th>{{stud.dept}}</th>
+      <th>{{stud.st_phno}}</th>
+      <th>{{stud.pa_phno}}</th>
+
+    </tr>
+    {% endfor %}
+  </table>
+
+
+
+
+</div>
+{% endblock %}

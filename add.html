@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Is there a Student that needs to be added?</h1>
+  <p>Add a new Student with the form below:</p>
+  <form method="POST">
+
+      {{ form.hidden_tag() }}
+      {{ form.name.label }} {{ form.name() }}
+      {{ form.sem.label }}  {{ form.sem()}}
+      {{ form.dept.label }}  {{ form.dept()}}
+      {{ form.st_phno.label }}  {{ form.st_phno()}}
+      {{ form.pa_phno.label }}  {{ form.pa_phno()}}
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Teacher Page</h1>
+  <p>Teacher Details:</p>
+  <form method="POST">
+
+      {{ form.hidden_tag() }}
+      
+      {{ form.tc_name.label }}  {{ form.tc_name()}}
+      {{ form.tc_dept.label }}  {{ form.tc_dept()}}
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}

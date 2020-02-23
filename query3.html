@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<div class="jumbotron">
+  <h1>Here is a list of all the Students of ISE Department who have attendance less than 85 percent.</h1>
+  <table style="width:100%">
+    <tr>
+      <th>USN</th>
+      <th>NAMET</th>
+      <th>DEPARTMENT</th>
+      <th>SEMESTER</th>
+      <th>ATT PERC</th>
+    </tr>
+
+    {% for rep1 in REPORTS1  %}
+
+    <tr>
+      <th>{{rep1.stu_usn}}</th>
+      <th>{{rep1.st2_name}}</th>
+      <th>{{rep1.dept4}}</th>
+      <th>{{rep1.sem4}}</th>
+      <th>{{rep1.attpercentage}}</th>
+
+    </tr>
+    {% endfor %}
+    </table>
+
+
+</div>
+{% endblock %}

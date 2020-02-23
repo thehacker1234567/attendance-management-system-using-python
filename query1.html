@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+<div class="jumbotron">
+  <h1>Here is a list of all the Students of ISE Department grouped by their names.</h1>
+  <table style="width:100%">
+    <tr>
+      <th>USN</th>
+      <th>NAME</th>
+      <th>SEMESTER</th>
+      <th>DEPARTMENT</th>
+      <th>STUDENT PHNO.</th>
+      <th>PARENT PHNO.</th>
+    </tr>
+
+    {% for stud1 in STUDENTS1  %}
+
+    <tr>
+      <th>{{stud1.usn}}</th>
+      <th>{{stud1.name}}</th>
+      <th>{{stud1.sem}}</th>
+      <th>{{stud1.dept}}</th>
+      <th>{{stud1.st_phno}}</th>
+      <th>{{stud1.pa_phno}}</th>
+
+    </tr>
+    {% endfor %}
+    </table>
+
+
+</div>
+{% endblock %}

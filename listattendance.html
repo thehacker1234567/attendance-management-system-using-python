@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<div class="jumbotron">
+  <h1>Student Attendance.</h1>
+  <table style="width:100%">
+    <tr>
+      <th>USN</th>
+      <th>DATE</th>
+      <th>STATUS</th>
+      <th>DEPARTMENT</th>
+      <th>SEMESTER</th>
+    </tr>
+
+    {% for att in ATTENDANCE  %}
+
+    <tr>
+      <th>{{att.stud_usn}}</th>
+      <th>{{att.date}}</th>
+      <th>{{att.status}}</th>
+      <th>{{att.dept2}}</th>
+      <th>{{att.sem2}}</th>
+
+    </tr>
+    {% endfor %}
+    </table>
+
+</div>
+{% endblock %}

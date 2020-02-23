@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<div class="jumbotron">
+  <h1>Here is a list of all the Subjects of 5th semester IS Department.</h1>
+  <table style="width:100%">
+    <tr>
+      <th>SUBJECT ID</th>
+      <th>DEPARTMENT</th>
+      <th>SUBJECT NAME</th>
+      <th>TEACHER NAME</th>
+    </tr>
+
+    {% for sub1 in SUBJECT1  %}
+
+    <tr>
+      <th>{{sub1.sub_id}}</th>
+      <th>{{sub1.dept3}}</th>
+      <th>{{sub1.sub_name}}</th>
+      <th>{{sub1.teacher_name}}</th>
+
+    </tr>
+    {% endfor %}
+    </table>
+
+
+</div>
+{% endblock %}

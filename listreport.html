@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<div class="jumbotron">
+  <h1>Here is a list of all the Students Report.</h1>
+  <table style="width:100%">
+    <tr>
+      <th>USN</th>
+      <th>NAME</th>
+      <th>DEPARTMENT</th>
+      <th>SEMESTER</th>
+      <th>ATT PERC</th>
+    </tr>
+
+    {% for rep in REPORTS  %}
+
+    <tr>
+      <th>{{rep.stu_usn}}</th>
+      <th>{{rep.st2_name}}</th>
+      <th>{{rep.dept4}}</th>
+      <th>{{rep.sem4}}</th>
+      <th>{{rep.attpercentage}}</th>
+
+    </tr>
+    {% endfor %}
+    </table>
+  <ul>
+
+</div>
+{% endblock %}

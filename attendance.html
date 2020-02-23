@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Attendance Page</h1>
+  <p>Attendance Details:</p>
+  <form method="POST">
+
+      {{ form.hidden_tag() }}
+
+      {{ form.stud_usn.label }}  {{ form.stud_usn()}}
+      {{ form.date.label }}  {{ form.date()}}
+      {{ form.status.label }}  {{ form.status()}}
+      {{ form.dept2.label }}  {{ form.dept2()}}
+      {{ form.sem2.label }}  {{ form.sem2()}}
+
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}

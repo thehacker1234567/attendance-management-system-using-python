@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Did a Student left the college ?</h1>
+  <p>Fill out the form to remove the student from the list.</p>
+  <form method="POST">
+
+      {{ form.hidden_tag() }}
+      {{ form.usn.label }} {{ form.usn() }}
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}

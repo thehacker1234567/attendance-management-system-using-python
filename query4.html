@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+  <h1>Name and Department of Teachers who teach ME.</h1>
+  <table style="width:100%">
+    <tr>
+      <th>NAME</th>
+      <th>DEPARTMENT</th>
+    </tr>
+
+    {% for que in query4  %}
+
+    <tr>
+      <th>{{que.teacher_name}}</th>
+      <th>{{que.dept3}}</th>
+
+
+    </tr>
+    {% endfor %}
+    </table>
+
+
+</div>
+{% endblock %}
